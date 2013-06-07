@@ -14,6 +14,7 @@
    [org.clojure/java.jdbc "0.2.3"]
    [com.h2database/h2 "1.3.170"]
    [korma "0.3.0-RC5"]
+   [clj-time "0.3.7"]
    [log4j
     "1.2.15"
     :exclusions
@@ -32,9 +33,9 @@
    :dev
    {:dependencies [[ring-mock "0.1.3"] [ring/ring-devel "1.1.8"]]}}
   :url
-  "http://example.com/FIXME"
+  "http://localhost:8000/"
   :plugins
   [[lein-ring "0.8.5"]]
   :description
-  "FIXME: write description"
+  "Simple chat with clojure and luminus"
   :min-lein-version "2.0.0")

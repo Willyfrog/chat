@@ -22,3 +22,19 @@
   (first (select users
                  (where {:id id})
                  (limit 1))))
+
+;; lounge
+
+(defentity lounge)
+
+(defn create-message
+  [user message]
+  (insert lounge
+          (values {:user_id user :date (new java.util.Date) :message message})))
+
+(defn retrieve-all-messages
+  []
+  (select lounge))
+
+(defn retrieve-messages-since [time_since]
+  (select lounge (:where {:date [<= time_since]})))
